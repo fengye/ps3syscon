@@ -1,0 +1,174 @@
+MOBO: SEM-001
+
+errlog
+ofst[ 48]:err_code:0xffffffff, clock:0x1bcbd11f  2014/10/11 11:29:35
+ofst[ 52]:err_code:0xa0403034, clock:0x1bcbd11f  2014/10/11 11:29:35
+ofst[ 56]:err_code:0xa0404402, clock:0x1bcbd128  2014/10/11 11:29:44
+ofst[ 60]:err_code:0xa0403034, clock:0x1bcbd128  2014/10/11 11:29:44
+ofst[ 64]:err_code:0xa0404402, clock:0x1bcbd133  2014/10/11 11:29:55
+ofst[ 68]:err_code:0xa0403034, clock:0x1bcbd133  2014/10/11 11:29:55
+ofst[ 72]:err_code:0xa0404402, clock:0x286191d5  2021/06/20 05:42:45
+ofst[ 76]:err_code:0xa0403034, clock:0x286191d5  2021/06/20 05:42:45
+ofst[ 80]:err_code:0xa0404402, clock:0x28a7d7d8  2021/08/12 13:00:08
+ofst[ 84]:err_code:0xa0403034, clock:0x28a7d7d8  2021/08/12 13:00:08
+ofst[ 88]:err_code:0xa0404402, clock:0x28a7d7eb  2021/08/12 13:00:27
+ofst[ 92]:err_code:0xa0403034, clock:0x28a7d7eb  2021/08/12 13:00:27
+ofst[ 96]:err_code:0xa0404402, clock:0x28a8cd5a  2021/08/13 06:27:38
+ofst[100]:err_code:0xa0403034, clock:0x28a8cd5a  2021/08/13 06:27:38
+ofst[104]:err_code:0xa0404402, clock:0x28a8cd66  2021/08/13 06:27:50
+ofst[108]:err_code:0xa0403034, clock:0x28a8cd66  2021/08/13 06:27:50
+ofst[112]:err_code:0xa0404402, clock:0x28acb729  2021/08/16 05:42:01
+ofst[116]:err_code:0xa0403034, clock:0x28acb729  2021/08/16 05:42:01
+ofst[120]:err_code:0xa0404402, clock:0x28acb967  2021/08/16 05:51:35
+ofst[124]:err_code:0xa0403034, clock:0x28acb967  2021/08/16 05:51:35
+ofst[  0]:err_code:0xa0404402, clock:0x28acb976  2021/08/16 05:51:50
+ofst[  4]:err_code:0xa0403034, clock:0x28acb976  2021/08/16 05:51:50
+ofst[  8]:err_code:0xa0404402, clock:0x28acd93e  2021/08/16 08:07:26
+ofst[ 12]:err_code:0xa0403034, clock:0x28acd93e  2021/08/16 08:07:26
+ofst[ 16]:err_code:0xa0404402, clock:0x28acd94f  2021/08/16 08:07:43
+ofst[ 20]:err_code:0xa0403034, clock:0x28acd94f  2021/08/16 08:07:43
+ofst[ 24]:err_code:0xa0404402, clock:0x28acd95c  2021/08/16 08:07:56
+ofst[ 28]:err_code:0xa0403034, clock:0x28acd95c  2021/08/16 08:07:56
+ofst[ 32]:err_code:0xa0404402, clock:0xffffffff
+ofst[ 36]:err_code:0xa0403034, clock:0xffffffff
+ofst[ 40]:err_code:0xa0404402, clock:0xffffffff
+ofst[ 44]:err_code:0xa0403034, clock:0xffffffff
+[mullion]$
+
+>$ lasterrlog
+lasterrlog
+Last Error Code:0xa0403034, Time:0xffffffff
+[mullion]$
+>$ lasterrlog
+lasterrlog
+Last Error Code:0xa0403034, Time:0xffffffff
+[mullion]$
+>$ lasterrlog
+lasterrlog
+Last Error Code:0xa0403034, Time:0xffffffff
+[mullion]$
+>$ powerstate
+powerstate
+ATA Power          : OFF
+PCI Power          : OFF
+RSX Power          : OFF
+XDR Power          : OFF
+Eurus Power        : OFF
+SB Power           : OFF
+RSX Thermal Sensor : UNAVAILABLE
+BE Thermal Sensor  : UNAVAILABLE
+[mullion]$
+
+>$ becount
+becount
+Bringup : 938 times
+Shutdown: 932 times
+Power-on: 353day 15hour 40min 16sec
+[mullion]$
+
+>$ version
+version
+v1.2.3_k1
+[mullion]$
+
+>$ bringup
+bringup
+[SSM] state: 0000 -> 0101
+Bringup Mode #0 (0xFF)
+[SSM] ssmCb_OnStartingBePowOn() called.
+[SSM] First Boot.
+[SSM] Bringup mode : syspm_stat=00000000/00000000
+[POWSEQ] PowerSeq_Setup called.
+[SSM] state: 0101 -> 0201
+[POWSEQ] AV Backend Setup
+[SSM] state: 0201 -> 0102
+>$ 
+
+[SSM] state: 0102 -> 0202
+[SSM] state: 0202 -> 0103
+[SSM] state: 0103 -> 0203
+[SSM] ssmCb_BeforeBeOn() called.
+[SSM] state: 0203 -> 0104
+Psbd_SbTransMode_Half:0x20e7
+[POWERSEQ] Error : BitTraining RSX:RRAC:RX0:GLOBAL1:RX_STATUS
+[SSM] state: 0104 -> 0304
+[SSM] ssmCb_AfterBeOn2() called.
+[SSM] PowSeq Fail : Detected !
+[SSM] state: 0304 -> 0700
+[POWSEQ] AV Backend Letup
+[SSM] Shutdown mode : syspm_stat=00000000/00000000
+[ERROR]: 0xa0404402
+[ERROR]: 0xa0403034
+[POWSEQ] PowerSeq_Letup called.
+[SSM] state: 0700 -> 0600
+(PowerOff State) (Fatal)
+
+[mullion]$
+
+>$ bringup
+bringup
+[SSM] state: 0000 -> 0101
+Bringup Mode #0 (0xFF)
+[SSM] ssmCb_OnStartingBePowOn() called.
+[SSM] Bringup mode : syspm_stat=00000000/00000000
+[POWSEQ] PowerSeq_Setup called.
+[SSM] state: 0101 -> 0201
+[POWSEQ] AV Backend Setup
+[SSM] state: 0201 -> 0102
+>$ 
+[SSM] state: 0102 -> 0202
+[SSM] state: 0202 -> 0103
+[SSM] state: 0103 -> 0203
+[SSM] ssmCb_BeforeBeOn() called.
+[SSM] state: 0203 -> 0104
+Psbd_SbTransMode_Half:0x20e7
+[POWERSEQ] Error : BitTraining RSX:RRAC:RX0:GLOBAL1:RX_STATUS
+[SSM] state: 0104 -> 0304
+[SSM] ssmCb_AfterBeOn2() called.
+[SSM] PowSeq Fail : Detected !
+[SSM] state: 0304 -> 0700
+[POWSEQ] AV Backend Letup
+[SSM] Shutdown mode : syspm_stat=00000000/00000000
+[ERROR]: 0xa0404402
+[ERROR]: 0xa0403034
+[POWSEQ] PowerSeq_Letup called.
+[SSM] state: 0700 -> 0600
+(PowerOff State) (Fatal)
+
+[mullion]$
+>$ shutdown
+shutdown
+[SSM] state: 0600 -> 0000
+[SSM] Error state is cleared.
+(PowerOff State)
+>$ bringup
+bringup
+[SSM] state: 0000 -> 0101
+Bringup Mode #0 (0xFF)
+[SSM] ssmCb_OnStartingBePowOn() called.
+[SSM] Bringup mode : syspm_stat=00000000/00000000
+[POWSEQ] PowerSeq_Setup called.
+[SSM] state: 0101 -> 0201
+[POWSEQ] AV Backend Setup
+[SSM] state: 0201 -> 0102
+>$ 
+[SSM] state: 0102 -> 0202
+[SSM] state: 0202 -> 0103
+[SSM] state: 0103 -> 0203
+[SSM] ssmCb_BeforeBeOn() called.
+[SSM] state: 0203 -> 0104
+Psbd_SbTransMode_Half:0x20e7
+[POWERSEQ] Error : BitTraining RSX:RRAC:RX0:GLOBAL1:RX_STATUS
+[SSM] state: 0104 -> 0304
+[SSM] ssmCb_AfterBeOn2() called.
+[SSM] PowSeq Fail : Detected !
+[SSM] state: 0304 -> 0700
+[POWSEQ] AV Backend Letup
+[SSM] Shutdown mode : syspm_stat=00000000/00000000
+[ERROR]: 0xa0404402
+[ERROR]: 0xa0403034
+[POWSEQ] PowerSeq_Letup called.
+[SSM] state: 0700 -> 0600
+(PowerOff State) (Fatal)
+
+[mullion]$

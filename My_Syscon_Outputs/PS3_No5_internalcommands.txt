@@ -1,0 +1,81 @@
+>$ lasterrlog
+lasterrlog
+Last Error Code:0xa0403034, Time:0xffffffff
+[mullion]$
+>$ bringup
+bringup
+[SSM] state: 0000 -> 0101
+Bringup Mode #0 (0xFF)
+[SSM] ssmCb_OnStartingBePowOn() called.
+[SSM] First Boot.
+[SSM] Bringup mode : syspm_stat=00000000/00000000
+[POWSEQ] PowerSeq_Setup called.
+[SSM] state: 0101 -> 0201
+[POWSEQ] AV Backend Setup
+[SSM] state: 0201 -> 0102
+[SSM] state: 0102 -> 0202
+[SSM] state: 0202 -> 0103
+[SSM] state: 0103 -> 0203
+[SSM] ssmCb_BeforeBeOn() called.
+[SSM] state: 0203 -> 0104
+Psbd_SbTransMode_Half:0x21e2
+>$ 
+[POWERSEQ] Error : BitTraining RSX:RRAC:RX0:GLOBAL1:RX_STATUS
+[SSM] state: 0104 -> 0304
+[SSM] ssmCb_AfterBeOn2() called.
+[SSM] PowSeq Fail : Detected !
+[SSM] state: 0304 -> 0700
+[POWSEQ] AV Backend Letup
+[SSM] Shutdown mode : syspm_stat=00000000/00000000
+[ERROR]: 0xa0404402
+[ERROR]: 0xa0403034
+[POWSEQ] PowerSeq_Letup called.
+[SSM] state: 0700 -> 0600
+(PowerOff State) (Fatal)
+
+>$ errlog
+errlog
+ofst[112]:err_code:0xffffffff, clock:0x1b71c50a  2014/08/04 04:14:02
+ofst[116]:err_code:0xa0403034, clock:0x1b71c50a  2014/08/04 04:14:02
+ofst[120]:err_code:0xa0404402, clock:0x1b71c545  2014/08/04 04:15:01
+ofst[124]:err_code:0xa0403034, clock:0x1b71c545  2014/08/04 04:15:01
+ofst[  0]:err_code:0xa0404402, clock:0x1b71c54d  2014/08/04 04:15:09
+ofst[  4]:err_code:0xa0403034, clock:0x1b71c54d  2014/08/04 04:15:09
+ofst[  8]:err_code:0xa0404402, clock:0x1b71c55b  2014/08/04 04:15:23
+ofst[ 12]:err_code:0xa0403034, clock:0x1b71c55b  2014/08/04 04:15:23
+ofst[ 16]:err_code:0xa0404402, clock:0x1b71c56e  2014/08/04 04:15:42
+ofst[ 20]:err_code:0xa0403034, clock:0x1b71c56e  2014/08/04 04:15:42
+ofst[ 24]:err_code:0xa0404402, clock:0x1b71c597  2014/08/04 04:16:23
+ofst[ 28]:err_code:0xa0403034, clock:0x1b71c597  2014/08/04 04:16:23
+ofst[ 32]:err_code:0xa0404402, clock:0x1d502026  2015/08/02 00:26:14
+ofst[ 36]:err_code:0xa0403034, clock:0x1d502026  2015/08/02 00:26:14
+ofst[ 40]:err_code:0xa0404402, clock:0x1d50202e  2015/08/02 00:26:22
+ofst[ 44]:err_code:0xa0403034, clock:0x1d50202e  2015/08/02 00:26:22
+ofst[ 48]:err_code:0xa0404402, clock:0x1d6922e7  2015/08/20 23:44:39
+ofst[ 52]:err_code:0xa0403034, clock:0x1d6922e7  2015/08/20 23:44:39
+ofst[ 56]:err_code:0xa0404402, clock:0x1d6922f1  2015/08/20 23:44:49
+ofst[ 60]:err_code:0xa0403034, clock:0x1d6922f1  2015/08/20 23:44:49
+ofst[ 64]:err_code:0xa0404402, clock:0x1d6922fb  2015/08/20 23:44:59
+ofst[ 68]:err_code:0xa0403034, clock:0x1d6922fb  2015/08/20 23:44:59
+ofst[ 72]:err_code:0xa0404402, clock:0x1d692304  2015/08/20 23:45:08
+ofst[ 76]:err_code:0xa0403034, clock:0x1d692304  2015/08/20 23:45:08
+ofst[ 80]:err_code:0xa0404402, clock:0x1d69231b  2015/08/20 23:45:31
+ofst[ 84]:err_code:0xa0403034, clock:0x1d69231b  2015/08/20 23:45:31
+ofst[ 88]:err_code:0xa0404402, clock:0x1d692325  2015/08/20 23:45:41
+ofst[ 92]:err_code:0xa0403034, clock:0x1d692325  2015/08/20 23:45:41
+ofst[ 96]:err_code:0xa0404402, clock:0xffffffff
+ofst[100]:err_code:0xa0403034, clock:0xffffffff
+ofst[104]:err_code:0xa0404402, clock:0xffffffff
+ofst[108]:err_code:0xa0403034, clock:0xffffffff
+
+>$ becount
+becount
+Bringup : 2885 times
+Shutdown: 2766 times
+Power-on: 217day 23hour 26min 07sec
+[mullion]$
+
+>$ version
+version
+v1.1.3_k1
+[mullion]$

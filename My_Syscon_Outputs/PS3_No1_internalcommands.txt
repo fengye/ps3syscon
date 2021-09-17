@@ -1,0 +1,293 @@
+>$ auth
+Auth successful
+>$ lasterrlog
+lasterrlog
+Last Error Code:0xa0801001, Time:0x0b48a1fd  2005/12/31 01:57:17
+[mullion]$
+>$ errlog
+errlog
+ofst[  8]:err_code:0xffffffff, clock:0x2455c0cd  2019/04/26 13:14:53
+ofst[ 12]:err_code:0xa0801004, clock:0x2591ad13  2019/12/22 04:26:59
+ofst[ 16]:err_code:0xa0801001, clock:0x25930429  2019/12/23 04:50:49
+ofst[ 20]:err_code:0xa0801002, clock:0x259f0b22  2020/01/01 07:47:46
+ofst[ 24]:err_code:0xa0801002, clock:0x25a4632c  2020/01/05 09:04:44
+ofst[ 28]:err_code:0xa0801002, clock:0x25f37b01  2020/03/05 08:55:29
+ofst[ 32]:err_code:0xa0801002, clock:0x25f37b4e  2020/03/05 08:56:46
+ofst[ 36]:err_code:0xa0801701, clock:0x2642741e  2020/05/04 06:35:10
+ofst[ 40]:err_code:0xa0801001, clock:0x2642741e  2020/05/04 06:35:10
+ofst[ 44]:err_code:0xa0801002, clock:0x265e2e24  2020/05/25 07:20:04
+ofst[ 48]:err_code:0xa0801002, clock:0x265e2e5e  2020/05/25 07:21:02
+ofst[ 52]:err_code:0xa0801002, clock:0x265e30c0  2020/05/25 07:31:12
+ofst[ 56]:err_code:0xa0801002, clock:0x265e30cb  2020/05/25 07:31:23
+ofst[ 60]:err_code:0xa0801002, clock:0x265e30d6  2020/05/25 07:31:34
+ofst[ 64]:err_code:0xa0801002, clock:0x268ed312  2020/07/01 04:52:34
+ofst[ 68]:err_code:0xa0801002, clock:0x268ed330  2020/07/01 04:53:04
+ofst[ 72]:err_code:0xa0801002, clock:0x268ed33c  2020/07/01 04:53:16
+ofst[ 76]:err_code:0xa0801002, clock:0x268ed345  2020/07/01 04:53:25
+ofst[ 80]:err_code:0xa0801002, clock:0x268ed354  2020/07/01 04:53:40
+ofst[ 84]:err_code:0xa0801002, clock:0x268ed361  2020/07/01 04:53:53
+ofst[ 88]:err_code:0xa0801002, clock:0x268ed36c  2020/07/01 04:54:04
+ofst[ 92]:err_code:0xa0801002, clock:0x272a9c9e  2020/10/27 08:53:50
+ofst[ 96]:err_code:0xa0801002, clock:0x2861a42e  2021/06/20 07:01:02
+ofst[100]:err_code:0xa0801002, clock:0x28a7e9e7  2021/08/12 14:17:11
+ofst[104]:err_code:0xa0801002, clock:0x28a7e9fc  2021/08/12 14:17:32
+ofst[108]:err_code:0xa0801002, clock:0x28acc8b0  2021/08/16 06:56:48
+ofst[112]:err_code:0xa0801002, clock:0x28accb71  2021/08/16 07:08:33
+ofst[116]:err_code:0xa0801002, clock:0x28accb80  2021/08/16 07:08:48
+ofst[120]:err_code:0xa0801002, clock:0x28accb8f  2021/08/16 07:09:03
+ofst[124]:err_code:0xa0801002, clock:0x28acea74  2021/08/16 09:20:52
+ofst[  0]:err_code:0xa0801002, clock:0x0b488680  2005/12/31 00:00:00
+ofst[  4]:err_code:0xa0801001, clock:0x0b48a1fd  2005/12/31 01:57:17
+[mullion]$
+>$ bringup
+bringup
+[SSM] state: 0000 -> 0101
+Bringup Mode #0 (0xFF)
+[SSM] ssmCb_OnStartingBePowOn() called.
+[SSM] First Boot.
+[SSM] Bringup mode : syspm_stat=00000000/00000000
+[POWSEQ] PowerSeq_Setup called.
+[SSM] state: 0101 -> 0201
+[POWSEQ] AV Backend Setup
+[SSM] state: 0201 -> 0102
+[SSM] state: 0102 -> 0202
+[SSM] state: 0202 -> 0103
+[SSM] state: 0103 -> 0203
+[SSM] ssmCb_BeforeBeOn() called.
+[SSM] state: 0203 -> 0104
+Psbd_SbTransMode_Half:0x20e7
+>$ 
+[SSM] state: 0104 -> 0204
+[SSM] state: 0204 -> 0105
+[SSM] state: 0105 -> 0400
+(PowerOn State)
+[SERV NVS] READ CMD
+
+Boot Loader SE Version 1.9.7 (Build ID: 2588,26593, Build Data: 2007-10-01_16:19:11)
+Copyright(C) 2007 Sony Computer Entertainment Inc.All Rights Reserved.
+[SERV SETCFG] XDR (CH0,CH1) ASSERT
+[SERV SETCFG] XDR (CH0,CH1) DEASSERT
+[INFO]: Connecting to Debug Device (SB UART)
+[SERV NVS] READ CMD
+[SERV NVS] READ CMD
+[SERV NVS] READ CMD
+[SERV NVS] READ CMD
+[SERV NVS] READ CMD
+[SERV NVS] READ CMD
+[SERV NVS] READ CMD
+[SERV NVS] READ CMD
+[SERV NVS] READ CMD
+[SERV NVS] READ CMD
+[SERV NVS] READ CMD
+[SERV NVS] READ CMD
+[SERV NVS] READ CMD
+[SERV NVS] READ CMD
+[SERV NVS] READ CMD
+[SERV NVS] READ CMD
+[SERV NVS] READ CMD
+[SERV NVS] READ CMD
+[SERV NVS] READ CMD
+[SERV NVS] READ CMD
+[SERV NVS] READ CMD
+[SERV NVS] READ CMD
+[SERV NVS] READ CMD
+[SERV NVS] READ CMD
+[SERV THERM] NOTIFY_MODE CMD
+
+[mullion]$
+>$ 
+[SERV NOTIF] CONTROL_LED
+[SERV NOTIF] RING_BUZZER
+[SERV NOTIF] CONTROL_LED
+[SERV NVS] READ CMD
+[SERV NVS] READ CMD
+[SERV NVS] READ CMD
+
+[mullion]$
+>$ 
+[mullion]$
+>$ 
+[mullion]$
+>$ 
+[mullion]$
+>$ shutdown
+[SERV NVS] READ CMD
+[SERV NVS] READ CMD
+[SERV NVS] READ CMD
+[SERV NVS] READ CMD
+[SERV NVS] READ CMD
+[SERV NVS] READ CMD
+[SERV NVS] READ CMD
+[SERV NVS] READ CMD
+shutdown
+[SSM] state: 0400 -> 0500
+[POWSEQ] AV Backend Letup
+[SSM] ssmCb_AfterBeOn() called.
+[SSM] Shutdown mode ... req_wake_src = 000000F4, ctxt=00/00
+[SSM] Shutdown mode : syspm_stat=00000000/00000000
+[POWSEQ] PowerSeq_Letup called.
+[SSM] state: 0500 -> 0000
+(PowerOff State)
+
+
+
+
+### Second time bringup
+>$ bringup
+bringup
+[SSM] state: 0000 -> 0101
+Bringup Mode #0 (0xFF)
+[SSM] ssmCb_OnStartingBePowOn() called.
+[SSM] First Boot.
+[SSM] Bringup mode : syspm_stat=00000000/00000000
+[POWSEQ] PowerSeq_Setup called.
+[SSM] state: 0101 -> 0201
+[POWSEQ] AV Backend Setup
+[SSM] state: 0201 -> 0102
+[SSM] state: 0102 -> 0202
+[SSM] state: 0202 -> 0103
+[SSM] state: 0103 -> 0203
+[SSM] ssmCb_BeforeBeOn() called.
+[SSM] state: 0203 -> 0104
+Psbd_SbTransMode_Half:0x20e7
+>$ 
+[SSM] state: 0104 -> 0204
+[SSM] state: 0204 -> 0105
+[SSM] state: 0105 -> 0400
+(PowerOn State)
+[SERV NVS] READ CMD
+
+Boot Loader SE Version 1.9.7 (Build ID: 2588,26593, Build Data: 2007-10-01_16:19:11)
+Copyright(C) 2007 Sony Computer Entertainment Inc.All Rights Reserved.
+[SERV SETCFG] XDR (CH0,CH1) ASSERT
+[SERV SETCFG] XDR (CH0,CH1) DEASSERT
+[INFO]: Connecting to Debug Device (SB UART)
+[SERV NVS] READ CMD
+[SERV NVS] READ CMD
+[SERV NVS] READ CMD
+[SERV NVS] READ CMD
+[SERV NVS] READ CMD
+[SERV NVS] READ CMD
+[SERV NVS] READ CMD
+[SERV NVS] READ CMD
+[SERV NVS] READ CMD
+[SERV NVS] READ CMD
+[SERV NVS] READ CMD
+[SERV NVS] READ CMD
+[SERV NVS] READ CMD
+[SERV NVS] READ CMD
+[SERV NVS] READ CMD
+[SERV NVS] READ CMD
+[SERV NVS] READ CMD
+[SERV NVS] READ CMD
+[SERV NVS] READ CMD
+[SERV NVS] READ CMD
+[SERV NVS] READ CMD
+[SERV NVS] READ CMD
+[SERV NVS] READ CMD
+[SERV NVS] READ CMD
+[SERV THERM] NOTIFY_MODE CMD
+[SERV NOTIF] CONTROL_LED
+[SERV NOTIF] RING_BUZZER
+[SERV NOTIF] CONTROL_LED
+[SERV NVS] READ CMD
+[SERV NVS] READ CMD
+[SERV NVS] READ CMD
+[SERV NVS] READ CMD
+[SERV NVS] READ CMD
+
+[mullion]$
+>$ 
+[SERV NVS] READ CMD
+[SERV NVS] READ CMD
+[SERV NVS] READ CMD
+[SERV NVS] READ CMD
+[SERV NVS] READ CMD
+[SERV NVS] READ CMD
+[SERV NVS] READ CMD
+[SERV NVS] READ CMD
+[SERV NVS] READ CMD
+[SERV NVS] READ CMD
+[SERV NVS] READ CMD
+
+[mullion]$
+
+### After adding capacitors, error
+>$ bringup
+bringup
+[SSM] state: 0000 -> 0101
+Bringup Mode #0 (0xFF)
+[SSM] ssmCb_OnStartingBePowOn() called.
+[SSM] First Boot.
+[SSM] Bringup mode : syspm_stat=00000000/00000000
+[POWSEQ] PowerSeq_Setup called.
+[SSM] state: 0101 -> 0201
+[POWSEQ] AV Backend Setup
+[SSM] state: 0201 -> 0102
+[SSM] state: 0102 -> 0202
+[SSM] state: 0202 -> 0103
+[SSM] state: 0103 -> 0203
+[SSM] ssmCb_BeforeBeOn() called.
+[SSM] state: 0203 -> 0104
+Psbd_SbTransMode_Half:0x20e7
+>$ 
+[SSM] state: 0104 -> 0204
+[SSM] state: 0204 -> 0105
+[SSM] state: 0105 -> 0400
+(PowerOn State)
+[SERV NVS] READ CMD
+
+Boot Loader SE Version 1.9.7 (Build ID: 2588,26593, Build Data: 2007-10-01_16:19:11)
+Copyright(C) 2007 Sony Computer Entertainment Inc.All Rights Reserved.
+[SERV SETCFG] XDR (CH0,CH1) ASSERT
+[SERV SETCFG] XDR (CH0,CH1) DEASSERT
+[INFO]: Connecting to Debug Device (SB UART)
+[SERV NVS] READ CMD
+[SERV NVS] READ CMD
+[SERV NVS] READ CMD
+[SERV NVS] READ CMD
+[SERV NVS] READ CMD
+[SERV NVS] READ CMD
+[SERV NVS] READ CMD
+[SERV NVS] READ CMD
+[SERV NVS] READ CMD
+[SERV NVS] READ CMD
+[SERV NVS] READ CMD
+[SERV NVS] READ CMD
+[SERV NVS] READ CMD
+[SERV NVS] READ CMD
+[SERV NVS] READ CMD
+[SERV NVS] READ CMD
+[SERV NVS] READ CMD
+[SERV NVS] READ CMD
+[SERV NVS] READ CMD
+[SERV NVS] READ CMD
+[SERV NVS] READ CMD
+[SERV NVS] READ CMD
+[SERV NVS] READ CMD
+[SERV NVS] READ CMD
+[SERV THERM] NOTIFY_MODE CMD
+[SERV NOTIF] CONTROL_LED
+[SERV NOTIF] RING_BUZZER
+[SERV NOTIF] CONTROL_LED
+[SERV NVS] READ CMD
+[SERV NVS] READ CMD
+[SERV NVS] READ CMD
+[SERV NVS] READ CMD
+[SERV NVS] READ CMD
+[SSM] *** Power Fail RS ***
+[SSM] state: 0400 -> 0700
+[POWSEQ] AV Backend Letup
+[SSM] ssmCb_AfterBeOn() called.
+[SSM] Shutdown mode : syspm_stat=00000000/00000000
+[ERROR]: 0xa0801002
+[POWSEQ] PowerSeq_Letup called.
+[SSM] state: 0700 -> 0600
+(PowerOff State) (Fatal)
+
+[mullion]$
+>$ shutdown
+shutdown
+[SSM] state: 0600 -> 0000
+[SSM] Error state is cleared.
+(PowerOff State)

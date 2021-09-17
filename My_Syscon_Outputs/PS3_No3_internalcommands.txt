@@ -1,0 +1,560 @@
+MOBO: DIA-001
+
+>$ errlog
+errlog
+ofst[108]:err_code:0xffffffff, clock:0x28c08b6e  2021/08/31 06:40:46
+ofst[112]:err_code:0xa0082131, clock:0x28c08b7a  2021/08/31 06:40:58
+ofst[116]:err_code:0xa0902131, clock:0x28c08b7b  2021/08/31 06:40:59
+ofst[120]:err_code:0xa0082131, clock:0x28c08b88  2021/08/31 06:41:12
+ofst[124]:err_code:0xa0082131, clock:0x28c08b95  2021/08/31 06:41:25
+ofst[  0]:err_code:0xa0902131, clock:0x28c08b95  2021/08/31 06:41:25
+ofst[  4]:err_code:0xa0a02131, clock:0x28c08ba7  2021/08/31 06:41:43
+ofst[  8]:err_code:0xa0a02031, clock:0x28c08ba7  2021/08/31 06:41:43
+ofst[ 12]:err_code:0xa0a02031, clock:0x28c08ba7  2021/08/31 06:41:43
+ofst[ 16]:err_code:0xa0a02031, clock:0x28c08ba7  2021/08/31 06:41:43
+ofst[ 20]:err_code:0xa0a02031, clock:0x28c08ba7  2021/08/31 06:41:43
+ofst[ 24]:err_code:0xa0a02031, clock:0x28c08ba7  2021/08/31 06:41:43
+ofst[ 28]:err_code:0xa0a02031, clock:0x28c08ba7  2021/08/31 06:41:43
+ofst[ 32]:err_code:0xa0082131, clock:0x28c08baa  2021/08/31 06:41:46
+ofst[ 36]:err_code:0xa0902131, clock:0x28c08baa  2021/08/31 06:41:46
+ofst[ 40]:err_code:0xa0082131, clock:0x28c08bb2  2021/08/31 06:41:54
+ofst[ 44]:err_code:0xa0902131, clock:0x28c08bb2  2021/08/31 06:41:54
+ofst[ 48]:err_code:0xa0082131, clock:0x28c08bc5  2021/08/31 06:42:13
+ofst[ 52]:err_code:0xa0902131, clock:0x28c08bc5  2021/08/31 06:42:13
+ofst[ 56]:err_code:0xa0082131, clock:0x28c08bd1  2021/08/31 06:42:25
+ofst[ 60]:err_code:0xa0902131, clock:0x28c08bd1  2021/08/31 06:42:25
+ofst[ 64]:err_code:0xa0a02131, clock:0xffffffff
+ofst[ 68]:err_code:0xa0a02031, clock:0xffffffff
+ofst[ 72]:err_code:0xa0a02131, clock:0xffffffff
+ofst[ 76]:err_code:0xa0a02131, clock:0xffffffff
+ofst[ 80]:err_code:0xa0a02131, clock:0xffffffff
+ofst[ 84]:err_code:0xa0a02131, clock:0xffffffff
+ofst[ 88]:err_code:0xa0082131, clock:0xffffffff
+ofst[ 92]:err_code:0xa0a02131, clock:0xffffffff
+ofst[ 96]:err_code:0xa0a02031, clock:0xffffffff
+ofst[100]:err_code:0xa0a02031, clock:0xffffffff
+ofst[104]:err_code:0xa0a02031, clock:0xffffffff
+[mullion]$
+>$ auth
+Auth successful
+>$ bringup
+bringup
+[SSM] state: 0000 -> 0101
+Bringup Mode #0 (0xFF)
+[SSM] ssmCb_OnStartingBePowOn() called.
+[SSM] First Boot.
+[SSM] Bringup mode : syspm_stat=00000000/00000000
+[POWSEQ] PowerSeq_Setup called.
+[SSM] state: 0101 -> 0301
+[SSM] PowSeq Fail : Detected !
+[SSM] state: 0301 -> 0700
+[POWSEQ] AV Backend Letup
+[SSM] Shutdown mode : syspm_stat=00000000/00000000
+[ERROR]: 0xa0082131
+[ERROR]: 0xa0902131
+>$ 
+
+
+After replacing capacitors with 200uf x 2
+>$ becount
+becount
+Bringup : 1654 times
+Shutdown: 1633 times
+Power-on: 166day 22hour 48min 48sec
+[mullion]$
+>$ bringup
+bringup
+[SSM] state: 0000 -> 0101
+Bringup Mode #0 (0xFF)
+[SSM] ssmCb_OnStartingBePowOn() called.
+[SSM] Bringup mode : syspm_stat=00000000/00000000
+[POWSEQ] PowerSeq_Setup called.
+[SSM] state: 0101 -> 0201
+[POWSEQ] AV Backend Setup
+[SSM] state: 0201 -> 0102
+[SSM] state: 0102 -> 0202
+[SSM] state: 0202 -> 0103
+[SSM] state: 0103 -> 0203
+[SSM] ssmCb_BeforeBeOn() called.
+[SSM] state: 0203 -> 0104
+Psbd_SbTransMode_Half:0x20e7
+[ERROR]: 0xa0502131
+>$ 
+[SSM] state: 0104 -> 0204
+[SSM] state: 0204 -> 0105
+[SSM] state: 0105 -> 0400
+(PowerOn State)
+[SERV NVS] READ CMD
+
+Boot Loader SE Version 2.1.0 (Build ID: 2709,28222, Build Data: 2007-12-05_13:32:28)
+Copyright(C) 2007 Sony Computer Entertainment Inc.All Rights Reserved.
+[SERV SETCFG] XDR (CH0,CH1) ASSERT
+[SERV SETCFG] XDR (CH0,CH1) DEASSERT
+[SERV NVS] READ CMD
+[ERROR]: 0xa0802031
+[INFO]: Connecting to Debug Device (SB UART)
+[SERV NVS] READ CMD
+[SERV NVS] READ CMD
+[SERV NVS] READ CMD
+[SERV NVS] READ CMD
+[SERV NVS] READ CMD
+[SERV NVS] READ CMD
+[SERV NVS] READ CMD
+[SERV NVS] READ CMD
+[SERV NVS] READ CMD
+[SERV NVS] READ CMD
+[SERV NVS] READ CMD
+[SERV NVS] READ CMD
+[SERV NVS] READ CMD
+[SERV NVS] READ CMD
+[SERV NVS] READ CMD
+[SERV NVS] READ CMD
+[SERV NVS] READ CMD
+[SERV NVS] READ CMD
+[SERV NVS] READ CMD
+[SERV NVS] READ CMD
+[SERV NVS] READ CMD
+[SERV NVS] READ CMD
+[SERV NVS] READ CMD
+[SERV NVS] READ CMD
+[SERV NVS] READ CMD
+[SERV THERM] NOTIFY_MODE CMD
+[ERROR]: 0xa0802131
+[ERROR]: 0xa0802031
+
+[mullion]$ [SERV NOTIF] CONTROL_LED
+[SERV NOTIF] RING_BUZZER
+[SERV NOTIF] CONTROL_LED
+>$ 
+[SERV NVS] READ CMD
+[ERROR]: 0xa0802131
+[ERROR]: 0xa0802031
+[ERROR]: 0xa0802131
+
+[mullion]$ [ERROR]: 0xa0802131
+>$ 
+[ERROR]: 0xa0802131
+[ERROR]: 0xa0802131
+[SERV NVS] READ CMD
+[ERROR]: 0xa0802131
+[ERROR]: 0xa0802031
+[ERROR]: 0xa0802031
+
+[mullion]$
+>$ 
+[ERROR]: 0xa0802131
+[ERROR]: 0xa0802031
+[ERROR]: 0xa0802031
+[ERROR]: 0xa0802131
+[ERROR]: 0xa0802031
+[ERROR]: 0xa0802031
+
+[mullion]$ [ERROR]: 0xa0802131
+>$ 
+[mullion]$
+>$ 
+[mullion]$ [ERROR]: 0xa0802131
+[ERROR]: 0xa0802131
+>$ 
+[mullion]$ [ERROR]: 0xa0802131
+[ERROR]: 0xa0802131
+>$ 
+[ERROR]: 0xa0802031
+[ERROR]: 0xa0802031
+[ERROR]: 0xa0802131
+[ERROR]: 0xa0802131
+[ERROR]: 0xa0802131
+[ERROR]: 0xa0802131
+[ERROR]: 0xa0802131
+
+[mullion]$ [ERROR]: 0xa0802131
+[ERROR]: 0xa0802131
+[ERROR]: 0xa0802131
+>$ 
+[ERROR]: 0xa0802131
+[ERROR]: 0xa0802131
+[ERROR]: 0xa0802131
+[SSM] *** Unrecoverable FATAL ERROR by thermal***
+[SSM] state: 0400 -> 0700
+[POWSEQ] AV Backend Letup
+[SSM] ssmCb_AfterBeOn() called.
+[SSM] Shutdown mode : syspm_stat=00000000/00000000
+[ERROR]: 0xa0802131
+
+[mullion]$ [POWSEQ] PowerSeq_Letup called.
+[SSM] state: 0700 -> 0600
+(PowerOff State) (Fatal)
+>$ 
+[mullion]$
+>$ shutdown
+shutdown
+[SSM] cannot clear fatal error state because of unrecoverable error.
+
+2nd bringup
+>$ bringup
+bringup
+[SSM] state: 0000 -> 0101
+Bringup Mode #0 (0xFF)
+[SSM] ssmCb_OnStartingBePowOn() called.
+[SSM] First Boot.
+[SSM] Bringup mode : syspm_stat=00000000/00000000
+[POWSEQ] PowerSeq_Setup called.
+[SSM] state: 0101 -> 0201
+[POWSEQ] AV Backend Setup
+[SSM] state: 0201 -> 0102
+[SSM] state: 0102 -> 0202
+[SSM] state: 0202 -> 0103
+[SSM] state: 0103 -> 0203
+[SSM] ssmCb_BeforeBeOn() called.
+[SSM] state: 0203 -> 0104
+Psbd_SbTransMode_Half:0x20e7
+[SSM] state: 0104 -> 0204
+[S
+>$ 
+SM] state: 0204 -> 0105
+[SSM] state: 0105 -> 0400
+(PowerOn State)
+[SERV NVS] READ CMD
+
+Boot Loader SE Version 2.1.0 (Build ID: 2709,28222, Build Data: 2007-12-05_13:32:28)
+Copyright(C) 2007 Sony Computer Entertainment Inc.All Rights Reserved.
+[SERV SETCFG] XDR (CH0,CH1) ASSERT
+[SERV SETCFG] XDR (CH0,CH1) DEASSERT
+[SERV NVS] READ CMD
+[INFO]: Connecting to Debug Device (SB UART)
+[SERV NVS] READ CMD
+[SERV NVS] READ CMD
+[SERV NVS] READ CMD
+[SERV NVS] READ CMD
+[SERV NVS] READ CMD
+[SERV NVS] READ CMD
+[SERV NVS] READ CMD
+[SERV NVS] READ CMD
+[SERV NVS] READ CMD
+[SERV NVS] READ CMD
+[SERV NVS] READ CMD
+[SERV NVS] READ CMD
+[SERV NVS] READ CMD
+[SERV NVS] READ CMD
+[SERV NVS] READ CMD
+[SERV NVS] READ CMD
+[SERV NVS] READ CMD
+[SERV NVS] READ CMD
+[SERV NVS] READ CMD
+[SERV NVS] READ CMD
+[SERV NVS] READ CMD
+[SERV NVS] READ CMD
+[ERROR]: 0xa0802031
+[SERV NVS] READ CMD
+[ERROR]: 0xa0802031
+[SERV NVS] READ CMD
+[SERV NVS] READ CMD
+[SERV THERM] NOTIFY_MODE CMD
+[ERROR]: 0xa0802031
+[ERROR]: 0xa0802031
+[ERROR]: 0xa0802031
+[ERROR]: 0xa0802031
+[SERV NOTIF] CONTROL_LED
+[SERV NOTIF] RING_BUZZER
+[SERV NOTIF] CONTROL_LED
+[ERROR]: 0xa0802031
+[SERV NVS] READ CMD
+[ERROR]: 0xa0802031
+[ERROR]: 0xa0802031
+[SSM] *** Unrecoverable FATAL ERROR by thermal***
+[SSM] state: 0400 -> 0700
+[POWSEQ] AV Backend Letup
+[SSM] ssmCb_AfterBeOn() called.
+[SSM] Shutdown mode : syspm_stat=00000000/00000000
+[ERROR]: 0xa0802031
+[POWSEQ] PowerSeq_Letup called.
+[SSM] state: 0700 -> 0600
+(PowerOff State) (Fatal)
+
+[mullion]$
+>$ shutdown
+shutdown
+[SSM] cannot clear fatal error state because of unrecoverable error.
+>$ 
+
+3rd bringup
+>$ bringup
+bringup
+[SSM] state: 0000 -> 0101
+Bringup Mode #0 (0xFF)
+[SSM] ssmCb_OnStartingBePowOn() called.
+[SSM] First Boot.
+[SSM] Bringup mode : syspm_stat=00000000/00000000
+[POWSEQ] PowerSeq_Setup called.
+[SSM] state: 0101 -> 0201
+[POWSEQ] AV Backend Setup
+[SSM] state: 0201 -> 0102
+[SSM] state: 0102 -> 0202
+[SSM] state: 0202 -> 0103
+[SSM] state: 0103 -> 0203
+[SSM] ssmCb_BeforeBeOn() called.
+[SSM] state: 0203 -> 0104
+Psbd_SbTransMode_Half:0x20e7
+>$ 
+[ERROR]: 0xa0232131
+[SSM] state: 0104 -> 0204
+[SSM] state: 0204 -> 0105
+[SSM] state: 0105 -> 0400
+(PowerOn State)
+[SERV NVS] READ CMD
+
+Boot Loader SE Version 2.1.0 (Build ID: 2709,28222, Build Data: 2007-12-05_13:32:28)
+Copyright(C) 2007 Sony Computer Entertainment Inc.All Rights Reserved.
+[SERV SETCFG] XDR (CH0,CH1) ASSERT
+[SERV SETCFG] XDR (CH0,CH1) DEASSERT
+[ERROR]: 0xa0802131
+[SERV NVS] READ CMD
+[INFO]: Connecting to Debug Device (SB UART)
+[SERV NVS] READ CMD
+[SERV NVS] READ CMD
+[SERV NVS] READ CMD
+[SERV NVS] READ CMD
+[SERV NVS] READ CMD
+[ERROR]: 0xa0802131
+[SERV NVS] READ CMD
+[SERV NVS] READ CMD
+[SERV NVS] READ CMD
+[ERROR]: 0xa0802131
+[SERV NVS] READ CMD
+[SERV NVS] READ CMD
+[SERV NVS] READ CMD
+[SERV NVS] READ CMD
+[SERV NVS] READ CMD
+[SERV NVS] READ CMD
+[SERV NVS] READ CMD
+[SERV NVS] READ CMD
+[SERV NVS] READ CMD
+[SERV NVS] READ CMD
+[SERV NVS] READ CMD
+[SERV NVS] READ CMD
+[SERV NVS] READ CMD
+[SERV NVS] READ CMD
+[SERV NVS] READ CMD
+[SERV NVS] READ CMD
+[ERROR]: 0xa0802131
+[SERV NVS] READ CMD
+[SERV THERM] NOTIFY_MODE CMD
+[ERROR]: 0xa0802131
+[ERROR]: 0xa0802131
+[SSM] *** Unrecoverable FATAL ERROR by thermal***
+[SSM] state: 0400 -> 0700
+[POWSEQ] AV Backend Letup
+[SSM] ssmCb_AfterBeOn() called.
+[SSM] Shutdown mode : syspm_stat=00000000/00000000
+[ERROR]: 0xa0802031
+[ERROR]: 0xa0902131
+[POWSEQ] PowerSeq_Letup called.
+[SSM] state: 0700 -> 0600
+(PowerOff State) (Fatal)
+
+[mullion]$
+
+4rd long bringup
+>$ bringup
+bringup
+[SSM] state: 0000 -> 0101
+Bringup Mode #0 (0xFF)
+[SSM] ssmCb_OnStartingBePowOn() called.
+[SSM] Bringup mode : syspm_stat=00000000/00000000
+[POWSEQ] PowerSeq_Setup called.
+[SSM] state: 0101 -> 0201
+[POWSEQ] AV Backend Setup
+[SSM] state: 0201 -> 0102
+[SSM] state: 0102 -> 0202
+[SSM] state: 0202 -> 0103
+[SSM] state: 0103 -> 0203
+[SSM] ssmCb_BeforeBeOn() called.
+[SSM] state: 0203 -> 0104
+Psbd_SbTransMode_Half:0x20e7
+>$ 
+[ERROR]: 0xa0512131
+[SSM] state: 0104 -> 0204
+[SSM] state: 0204 -> 0105
+[SSM] state: 0105 -> 0400
+(PowerOn State)
+[SERV NVS] READ CMD
+
+Boot Loader SE Version 2.1.0 (Build ID: 2709,28222, Build Data: 2007-12-05_13:32:28)
+Copyright(C) 2007 Sony Computer Entertainment Inc.All Rights Reserved.
+[SERV SETCFG] XDR (CH0,CH1) ASSERT
+[SERV SETCFG] XDR (CH0,CH1) DEASSERT
+[SERV NVS] READ CMD
+[INFO]: Connecting to Debug Device (SB UART)
+[SERV NVS] READ CMD
+[SERV NVS] READ CMD
+[ERROR]: 0xa0802131
+[ERROR]: 0xa0802131
+[SERV NVS] READ CMD
+[SERV NVS] READ CMD
+[SERV NVS] READ CMD
+[ERROR]: 0xa0802131
+[SERV NVS] READ CMD
+[SERV NVS] READ CMD
+[SERV NVS] READ CMD
+[SERV NVS] READ CMD
+[SERV NVS] READ CMD
+[SERV NVS] READ CMD
+[SERV NVS] READ CMD
+[SERV NVS] READ CMD
+[SERV NVS] READ CMD
+[SERV NVS] READ CMD
+[SERV NVS] READ CMD
+[SERV NVS] READ CMD
+[SERV NVS] READ CMD
+[SERV NVS] READ CMD
+[SERV NVS] READ CMD
+[SERV NVS] READ CMD
+[SERV NVS] READ CMD
+[SERV NVS] READ CMD
+[SERV NVS] READ CMD
+[SERV NVS] READ CMD
+[SERV THERM] NOTIFY_MODE CMD
+[SERV NOTIF] CONTROL_LED
+[SERV NOTIF] RING_BUZZER
+[SERV NOTIF] CONTROL_LED
+[SERV NVS] READ CMD
+[ERROR]: 0xa0802131
+[ERROR]: 0xa0802131
+[ERROR]: 0xa0802131
+[SSM] *** Unrecoverable FATAL ERROR by thermal***
+[SSM] state: 0400 -> 0700
+[POWSEQ] AV Backend Letup
+[SSM] ssmCb_AfterBeOn() called.
+[SSM] Shutdown mode : syspm_stat=00000000/00000000
+[ERROR]: 0xa0802131
+[POWSEQ] PowerSeq_Letup called.
+[SSM] state: 0700 -> 0600
+(PowerOff State) (Fatal)
+
+
+# First 2111 ERROR
+ >$ bringup
+bringup
+[SSM] state: 0000 -> 0101
+Bringup Mode #0 (0xFF)
+[SSM] ssmCb_OnStartingBePowOn() called.
+[SSM] First Boot.
+[SSM] Bringup mode : syspm_stat=00000000/00000000
+[POWSEQ] PowerSeq_Setup called.
+[SSM] state: 0101 -> 0201
+[POWSEQ] AV Backend Setup
+[SSM] state: 0201 -> 0102
+[SSM] state: 0102 -> 0202
+[SSM] state: 0202 -> 0103
+[SSM] state: 0103 -> 0203
+[SSM] ssmCb_BeforeBeOn() called.
+[SSM] state: 0203 -> 0104
+Psbd_SbTransMode_Half:0x20e7
+>$ 
+[SSM] state: 0104 -> 0204
+[SSM] state: 0204 -> 0105
+[SSM] state: 0105 -> 0400
+(PowerOn State)
+[SERV NVS] READ CMD
+
+Boot Loader SE Version 2.1.0 (Build ID: 2709,28222, Build Data: 2007-12-05_13:32:28)
+Copyright(C) 2007 Sony Computer Entertainment Inc.All Rights Reserved.
+[SERV SETCFG] XDR (CH0,CH1) ASSERT
+[SERV SETCFG] XDR (CH0,CH1) DEASSERT
+[SERV NVS] READ CMD
+[ERROR]: 0xa0802131
+[INFO]: Connecting to Debug Device (SB UART)
+[SERV NVS] READ CMD
+[SERV NVS] READ CMD
+[ERROR]: 0xa0802131
+[SERV NVS] READ CMD
+[SERV NVS] READ CMD
+[ERROR]: 0xa0802131
+[SERV NVS] READ CMD
+[SSM] *** Unrecoverable FATAL ERROR by thermal***
+[SSM] state: 0400 -> 0700
+[POWSEQ] AV Backend Letup
+[SSM] ssmCb_AfterBeOn() called.
+[SSM] Shutdown mode : syspm_stat=00000000/00000000
+[ERR_PRINT] serv_setconf.c, line 1605
+[SERV SETCFG] *** sending error ***
+[ERROR]: 0xa0802131
+[ERROR]: 0xa0902111
+[ERROR]: 0xa0902111
+[ERROR]: 0xa0902131
+[POWSEQ] PowerSeq_Letup called.
+[SSM] state: 0700 -> 0600
+(PowerOff State) (Fatal)
+
+bringup
+[SSM] state: 0000 -> 0101
+Bringup Mode #0 (0xFF)
+[SSM] ssmCb_OnStartingBePowOn() called.
+[SSM] First Boot.
+[SSM] Bringup mode : syspm_stat=00000000/00000000
+[POWSEQ] PowerSeq_Setup called.
+[SSM] state: 0101 -> 0201
+[POWSEQ] AV Backend Setup
+[SSM] state: 0201 -> 0102
+[SSM] state: 0102 -> 0202
+[SSM] state: 0202 -> 0103
+[SSM] state: 0103 -> 0203
+[SSM] ssmCb_BeforeBeOn() called.
+[SSM] state: 0203 -> 0104
+Psbd_SbTransMode_Half:0x20e7
+>$ 
+[SSM] state: 0104 -> 0204
+[SSM] state: 0204 -> 0105
+[SSM] state: 0105 -> 0400
+(PowerOn State)
+[SERV NVS] READ CMD
+
+Boot Loader SE Version 2.1.0 (Build ID: 2709,28222, Build Data: 2007-12-05_13:32:28)
+Copyright(C) 2007 Sony Computer Entertainment Inc.All Rights Reserved.
+[SERV SETCFG] XDR (CH0,CH1) ASSERT
+[SERV SETCFG] XDR (CH0,CH1) DEASSERT
+[SERV NVS] READ CMD
+[INFO]: Connecting to Debug Device (SB UART)
+[SERV NVS] READ CMD
+[SERV NVS] READ CMD
+[SERV NVS] READ CMD
+[SERV NVS] READ CMD
+[SERV NVS] READ CMD
+[SERV NVS] READ CMD
+[SERV NVS] READ CMD
+[SERV NVS] READ CMD
+[ERROR]: 0xa0802131
+[SERV NVS] READ CMD
+[SERV NVS] READ CMD
+[SERV NVS] READ CMD
+[SERV NVS] READ CMD
+[SERV NVS] READ CMD
+[SERV NVS] READ CMD
+[SERV NVS] READ CMD
+[SERV NVS] READ CMD
+[SERV NVS] READ CMD
+[SERV NVS] READ CMD
+[SERV NVS] READ CMD
+[SERV NVS] READ CMD
+[SERV NVS] READ CMD
+[SERV NVS] READ CMD
+[SERV NVS] READ CMD
+[SERV NVS] READ CMD
+[SERV NVS] READ CMD
+[SERV THERM] NOTIFY_MODE CMD
+[SERV NOTIF] CONTROL_LED
+[SERV NOTIF] RING_BUZZER
+[SERV NOTIF] CONTROL_LED
+[ERROR]: 0xa0802131
+[SERV NVS] READ CMD
+[ERROR]: 0xa0802131
+[ERROR]: 0xa0802131
+[SSM] *** Unrecoverable FATAL ERROR by thermal***
+[SSM] state: 0400 -> 0700
+[POWSEQ] AV Backend Letup
+[SSM] ssmCb_AfterBeOn() called.
+[SSM] Shutdown mode : syspm_stat=00000000/00000000
+[ERROR]: 0xa0802131
+[POWSEQ] PowerSeq_Letup called.
+[SSM] state: 0700 -> 0600
+(PowerOff State) (Fatal)
